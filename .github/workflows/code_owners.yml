@@ -8,6 +8,12 @@ name: Codeowners
 
 on:
   pull_request:
+    types:
+      - edited
+      - opened
+      - ready_for_review
+      - reopened
+      - synchronize
     paths:
       - '**.js'
       - '**.ts'
