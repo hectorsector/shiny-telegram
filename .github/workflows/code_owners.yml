@@ -20,7 +20,7 @@ on:
 
 jobs:
   codeowners-docs-engineering:
-    if: ${{ github.repository == 'hectorsector/shiny-telegram' && true }}
+    if: ${{ github.repository == 'hectorsector/shiny-telegram' && !github.event.pull_request.draft }}
 #     if: ${{ github.repository == 'hectorsector/shiny-telegram' && github.event.pull_request.draft == 'false' }}
     runs-on: ubuntu-latest
     env:
@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - name: Label as engineering
-        run: gh pr edit $PR --add-label engineering
+        run: gh pr edit $PR --add-label bug
 
       - name: Add Docs Engineering as a reviewer
         run: |
