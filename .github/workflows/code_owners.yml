@@ -20,7 +20,8 @@ on:
 
 jobs:
   codeowners-docs-engineering:
-    if: ${{ github.repository == 'hectorsector/shiny-telegram' && github.event.pull_request.draft == 'false' }}
+    if: ${{ github.repository == 'hectorsector/shiny-telegram'}}
+#     if: ${{ github.repository == 'hectorsector/shiny-telegram' && github.event.pull_request.draft == 'false' }}
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
