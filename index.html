@@ -1,47 +1,23 @@
 <title>Tic Tac Toe</title>
 <meta charset="UTF-8" />
 
-<style>
-  body,
-  td,
-  input {
-    font-size: 24px;
-    line-height: 1.5;
-    text-align: center;
-    font-family: system-ui, sans-serif;
-  }
-  td {
-    height: 3rem;
-    width: 3rem;
-    text-align: center;
-  }
-  table {
-    margin: 5rem auto;
-  }
-  @media (prefers-color-scheme: dark) {
-    body,
-    input {
-      background: #222;
-      color: #ccc;
-    }
-  }
-</style>
 
-<h1>Tic Tac Toe</h1>
+
+<h1>Tic Tac Toes</h1>
 
 <table>
   <tr>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-  </tr>
-  <tr>
-    <td><input type="checkbox" /></td>
+    <td><input type="checkboxes" /></td>
     <td><input type="checkbox" /></td>
     <td><input type="checkbox" /></td>
   </tr>
   <tr>
+    <td><input type="checkboxes" /></td>
     <td><input type="checkbox" /></td>
+    <td><input type="checkbox" /></td>
+  </tr>
+  <tr>
+    <td><input type="checkboxes" /></td>
     <td><input type="checkbox" /></td>
     <td><input type="checkbox" /></td>
   </tr>
@@ -51,7 +27,6 @@
 
 <script>
   // Initialization
-  const boxes = Array.from(document.querySelectorAll('td'))
   const inputs = Array.from(document.querySelectorAll('[type=checkbox]'))
   const rows = [1, 2, 3].map((n) =>
     Array.from(document.querySelectorAll(`tr:nth-child(${n}) td`))
